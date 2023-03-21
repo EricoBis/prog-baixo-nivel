@@ -8,7 +8,7 @@
 int main()
 {
     // Numero de linhas pode ser omitido, mas nao de caracteres por linha
-    // O impacto disso e' que estamos declarando efetivamente uma MATRIZ
+    // O impacto disso e' que estamos declarando efetivamente uma MATRIZ (gasta mais memoria)
     // de caracteres, com 9 linhas e 8 colunas (e varios espacos nao usados - slide 65)
     char planets1[][8] = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn",
                          "Uranus", "Neptune", "Pluto" };
