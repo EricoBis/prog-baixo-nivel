@@ -43,12 +43,12 @@ int main()
     f1.numerador = 2;
     f1.denominador = 3;
 
-    Fracao res1 = adiciona(&f1, &f2);
+    Fracao f3 = adiciona(&f1, &f2);
     printf("Resultado Adiciona: Numerador[f3] = %f | Denominador[f3] = %f\n", f3.numerador, f3.denominador);
-    Fracao res2 = multiplica(&f1, &f2);
+    f3 = multiplica(&f1, &f2);
     printf("Resultado Multiplica: Numerador[f3] = %f | Denominador[f3] = %f\n", f3.numerador, f3.denominador);
-    //printf("Valor (calcula) : %f\n", calcula(f1));
-    //printf("Valor (calcula2): %f\n", calcula2(&f1));
+    // printf("Valor (calcula) : %f\n", calcula(f1));
+    // printf("Valor (calcula2): %f\n", calcula2(&f1));
 }
 
 float calcula(Fracao frac)
@@ -66,10 +66,9 @@ float calcula2(const Fracao *frac)
 Fracao adiciona(const Fracao *f1, const Fracao *f2)
 {
     Fracao f3;
-    int denom = f1->denominador * f2->denominador;
-    f3.numerador = (denom / f1->denominador * f1->numerador) + (denom / f2->denominador* f2->numerador);
-    f3.denominador = denom;
-
+    f3.denominador = f1->denominador * f2->denominador;
+    f3.numerador = (f3.denominador / f1->denominador * f1->numerador) +
+                   (f3.denominador / f2->denominador * f2->numerador);
     return f3;
 }
 
